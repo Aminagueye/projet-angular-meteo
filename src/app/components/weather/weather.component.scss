@@ -1,74 +1,80 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 .weather-container {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 1rem;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .search-box {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 10px;
+  justify-content: center;
+}
 
-  input {
-    flex: 1;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #f3eeec88;
+}
 
-  button {
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background: hsl(209, 100%, 57%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-    &:hover {
-      background-color: #0056b3;
-    }
-  }
+button:hover {
+  background: #e64a19;
 }
 
 .weather-info {
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  padding: 1.5rem;
-  text-align: center;
+  margin-top: 20px;
+}
 
-  .weather-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0;
+.weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 
-    img {
-      width: 50px;
-      height: 50px;
-    }
+.weather-main img {
+  width: 80px;
+  height: 80px;
+}
 
-    h3 {
-      font-size: 2rem;
-      margin: 0;
-    }
-  }
-
-  .weather-details {
-    text-align: left;
-    
-    p {
-      margin: 0.5rem 0;
-    }
-  }
+.weather-details {
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 .loading, .error {
-  text-align: center;
-  padding: 1rem;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
-
-.error {
-  color: #dc3545;
-} 

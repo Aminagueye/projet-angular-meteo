@@ -5,4 +5,10 @@ main {
   min-height: 100vh;
   padding: 2rem;
   background-color: #f5f5f5;
+  background-image: url('./assets/ciel.avif');
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+
 } 
