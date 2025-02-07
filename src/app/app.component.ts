@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { WeatherComponent } from './components/weather/weather.component';
+import { MeteoComponent } from './components/meteo/meteo.component';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,10 @@ import { WeatherComponent } from './components/weather/weather.component';
   styleUrls: ['./app.component.scss'],
   imports: [
     RouterOutlet, 
-    WeatherComponent
+    MeteoComponent
   ],
   standalone: true
 })
 export class AppComponent {
-  title = 'weather-app';
+  title = 'Application météo';
 }
