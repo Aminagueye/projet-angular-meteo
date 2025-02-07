@@ -1,0 +1,38 @@
+<div class="weather-container">
+    <h1>Bienvenue dans l'application météo de GROUPE 1-FORCE N</h1><br>
+    <p style="text-align: center">Taper le nom d'une ville pour connaître son climat actuel</p>
+  <div class="search-box">
+    <input 
+      type="text" 
+      [(ngModel)]="city" 
+      placeholder="Entrez le nom de la ville"
+      (keyup.enter)="searchWeather()"
+    >
+    <button (click)="searchWeather()">Rechercher</button>
+  </div>
+
+  <div class="weather-info" *ngIf="weatherData && !loading">
+    <h2>{{weatherData.name}}, {{weatherData.sys.country}}</h2>
+    <div class="weather-main">
+      <img 
+        [src]="'http://openweathermap.org/img/w/' + weatherData.weather[0].icon + '.png'" 
+        [alt]="getWeatherDescription(weatherData.weather[0].description)"
+      >
+      <h3>{{weatherData.main.temp}}°C</h3>
+    </div>
+    <div class="weather-details">
+      <p>Météo: {{getWeatherDescription(weatherData.weather[0].main)}}</p>
+      <p>Description: {{getWeatherDescription(weatherData.weather[0].description)}}</p>
+      <p>Humidité: {{weatherData.main.humidity}}%</p>
+      <p>Vitesse du vent: {{weatherData.wind.speed}} m/s</p>
+    </div>
+  </div>
+
+  <div class="loading" *ngIf="loading">
+    Chargement des données météo...
+  </div>
+
+  <div class="error" *ngIf="error">
+      <p style="text-align: center; color: red">{{ error }}</p>
+  </div>
+</div> 
